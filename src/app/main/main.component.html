@@ -1,0 +1,14 @@
+<div class="container-fluid bg-info border p-3">
+	<div class="d-flex justify-content-between">
+		<h2>{{username}}  <span class="badge badge-danger">{{noOfBookmarks}}</span></h2>
+		<span><button *ngIf="!loginVisibility" class="btn btn-warning" (click)="logUserOut()">Logout</button></span>
+	</div>
+	<div *ngIf="loginVisibility" class="d-flex">
+		<input  #userField  type="text" class="form-control" placeholder="Enter Username">
+		<input  #passField  type="password" class="form-control ml-2" placeholder="Enter password" >
+		<div class="btn-group ml-2">
+			<button class="btn btn-primary" (click)="sendAuth(userField.value,passField.value)">Login</button>
+			<button class="btn btn-primary" (click)="addUser(userField.value,passField.value)">SignUp</button>
+		</div>
+	</div>
+</div>

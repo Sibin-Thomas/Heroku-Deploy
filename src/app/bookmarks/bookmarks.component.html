@@ -1,0 +1,15 @@
+<div class="container w-50 bg-secondary rounded">
+	<div class="d-flex p-2">
+		<input #bookmarkField type="text" class="form-control" placeholder="Enter Bookmark">
+		<button class="btn-success ml-2" (click)="addBookmark(bookmarkField.value);bookmarkField.value='';">Add</button>
+	</div>	
+	<ul style="list-style-type: none;padding: 0">
+		<li *ngFor="let bookmark of bookmarks;index as i">
+			<div class="container pb-2">
+				<a href="{{bookmark.bookmarkUrl}}"><button class="btn btn-info col-10">{{bookmark.bookmarkName}}</button></a>
+				<button class="btn btn-danger ml-3" (click)="removeBookmark(i)">Remove</button>
+			</div>
+			<div></div>
+		</li>
+	</ul>
+</div>
