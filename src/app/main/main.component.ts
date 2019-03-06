@@ -22,13 +22,7 @@ export class MainComponent implements OnInit {
   		this.noOfBookmarks = 0;
       this.showLoginDetails();
   		this.bookmarkservice.getBookmark().subscribe(bookmark =>this.noOfBookmarks=bookmark.length);
-      this.http.get('http://localhost:8000/user/getActiveUser',{responseType: 'text'})
-                    .subscribe((response)=>{
-                      if (response != 'No Active User'){
-                          this.hideLoginDetails();
-                          this.username = response;
-                          this.usernameservice.broadcastUsername(this.username);
-                      }});
+      
   	}	
 
   	ngOnDestroy(){
