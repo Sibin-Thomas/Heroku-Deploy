@@ -1,5 +1,7 @@
-# Angular
-
+# Linkmark App
+## basically used for bookmarking your links which you also see on chrome new tab.
+### Just made this to have an handson with MEAN stack.
+## [Link to Website](https://depllloy.herokuapp.com/)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## Development server
